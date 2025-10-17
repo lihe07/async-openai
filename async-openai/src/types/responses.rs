@@ -327,13 +327,14 @@ pub struct PromptConfig {
 
 /// Service tier request options.
 #[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq)]
-#[serde(rename_all = "lowercase")]
+#[serde(rename_all = "snake_case")]
 pub enum ServiceTier {
     Auto,
     Default,
     Flex,
     Scale,
     Priority,
+    OnDemand,
 }
 
 /// Truncation strategies.
